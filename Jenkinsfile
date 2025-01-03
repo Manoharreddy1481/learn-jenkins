@@ -27,4 +27,5 @@ pipeline {
         failure {
             echo 'your job is got failed'
         }
+    }
 }
