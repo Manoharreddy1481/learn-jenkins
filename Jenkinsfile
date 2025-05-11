@@ -4,9 +4,12 @@ pipeline {
     }
     options{
         timeout(time: 10, unit: 'SECONDS')
-        disableConcurrentBuilds()
-        retry(2)
     }
+    options{
+        disableConcurrentBuilds()
+    }
+        //retry(2)
+    
     stages {
             stage("Build") {
                 steps {
