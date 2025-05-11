@@ -32,6 +32,9 @@ pipeline {
                 }
             }
             stage("Deploy") {
+                when {
+                    branch 'production'
+                }
                 steps {
                     sh "echo Deploy stage"
                     //error "Pipeline fail"
