@@ -33,7 +33,7 @@ pipeline {
             }
             stage("Deploy") {
                 when {
-                    env.GIT_BRANCH=='origin/main'
+                    expression(env.BRANCH_NAME=='origin/main')
                 }
                 steps {
                     sh "echo Deploy stage"
