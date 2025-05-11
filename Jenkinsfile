@@ -4,11 +4,9 @@ pipeline {
     }
     options{
         timeout(time: 10, unit: 'SECONDS')
-    }
-    options{
         disableConcurrentBuilds()
-    }
         //retry(2)
+    }
     
     stages {
             stage("Build") {
@@ -25,7 +23,7 @@ pipeline {
             stage("Deploy") {
                 steps {
                     sh "echo Deploy stage"
-                    error "Pipeline fail"
+                    //error "Pipeline fail"
                 }
             }
     }
