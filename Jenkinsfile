@@ -9,12 +9,12 @@ pipeline {
              stage("Test") {
                 steps {
                     sh "echo Test Stage"
-                    abcd
                 }
             }
             stage("Deploy") {
                 steps {
                     sh "echo Deploy stage"
+                    error "Pipeline fail"
                 }
             }
     }
